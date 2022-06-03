@@ -27,25 +27,20 @@ var LinkedList = function() {
   // O(n) linear time complexity
 
   list.contains = function(target) {
-    console.log(target);
-    // set current node to the list head
+    //console.log(target);
+
     var currentNode = list.head;
-    // while currentNode is not null
+
     while(currentNode) {
-      // if currentNode's value is equal to the target
-      console.log(currentNode);
       if(currentNode.value === target) {
-        console.log('inside');
-        // return true
         return true;
-      // otherwise
       }else{
-        // set currentNode to the next node
         currentNode = currentNode.next;
       }
     }
-    // if the while loop exits because currentNode is null, return false
+
     return false
+
   };
 
   return list;
