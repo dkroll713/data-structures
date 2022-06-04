@@ -29,7 +29,7 @@ bstMethods.insert = function(value) {
   } else if (this.left && value < this.value) {
     bstMethods.insert.call(this.left, value);
   }
-}
+};
 
 bstMethods.contains = function(value) {
   var boolean = false;
@@ -48,7 +48,7 @@ bstMethods.contains = function(value) {
 
 
   return boolean;
-}
+};
 
 bstMethods.depthFirstLog = function(callback) {
   console.log(this);
@@ -58,13 +58,13 @@ bstMethods.depthFirstLog = function(callback) {
   }
   // if the left exists, use call to reset 'this' to the left node
   if (this.left) {
-    bstMethods.depthFirstLog.call(this.left, callback)
+    bstMethods.depthFirstLog.call(this.left, callback);
   }
   // if the right exists, use call to reset 'this' to the right node
   if (this.right) {
     bstMethods.depthFirstLog.call(this.right, callback);
   }
-}
+};
 
 // BinarySearchTree.prototype.insert = function (value) {
 //   console.log(value);

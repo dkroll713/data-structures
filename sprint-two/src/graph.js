@@ -11,7 +11,7 @@ Graph.prototype.addNode = function(node) {
   let element = {
     val: node,
     edge: [],
-  }
+  };
   this.storage.push(element);
   //console.log(this.storage);
 };
@@ -22,7 +22,7 @@ Graph.prototype.contains = function(node) {
   let boolean = false;
 
   for (let x = 0; x < this.storage.length; x++) {
-    if(this.storage[x].val === node) {
+    if (this.storage[x].val === node) {
       boolean = true;
     }
   }
@@ -50,8 +50,8 @@ Graph.prototype.removeNode = function(node) {
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function(fromNode, toNode) {
   let boolean = false;
-  for( let x = 0; x < this.storage.length; x++) {
-    if(this.storage[x].val === fromNode && this.storage[x].edge.includes(toNode)) {
+  for ( let x = 0; x < this.storage.length; x++) {
+    if (this.storage[x].val === fromNode && this.storage[x].edge.includes(toNode)) {
       boolean = true;
     }
   }
@@ -60,11 +60,11 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
-  for( let x = 0; x < this.storage.length; x++) {
-    if(this.storage[x].val === fromNode) {
+  for ( let x = 0; x < this.storage.length; x++) {
+    if (this.storage[x].val === fromNode) {
       this.storage[x].edge.push(toNode);
     }
-    if(this.storage[x].val === toNode) {
+    if (this.storage[x].val === toNode) {
       this.storage[x].edge.push(fromNode);
     }
   }
@@ -72,8 +72,8 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
-  for( let x = 0; x < this.storage.length; x++) {
-    if(this.storage[x].val === fromNode && this.storage[x].edge.includes(toNode)) {
+  for ( let x = 0; x < this.storage.length; x++) {
+    if (this.storage[x].val === fromNode && this.storage[x].edge.includes(toNode)) {
       // this.storage[x].edge = undefined;
       for (let y = 0; y < this.storage[x].edge.length; y++) {
         if (this.storage[x].edge[y] === toNode) {
