@@ -16,15 +16,12 @@ HashTable.prototype.insert = function(k, v) {
   } else {
     //bucket.push(tuple);
     var currentBucket = this._storage.get(index);
-    console.log(currentBucket);
     for (var x = 0; x < currentBucket.length; x++) {
       let tuple = currentBucket[x];
       if (tuple.includes(k)) {
-        console.log(tuple);
         tuple = [k, v];
         bucket.push(tuple)
         this._storage.set(index, bucket);
-        console.log(tuple);
       }
     }
     this._storage.get(index).push(tuple);
