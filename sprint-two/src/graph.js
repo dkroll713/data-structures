@@ -94,11 +94,11 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
 
 // Pass in a callback which will be executed on each node of the graph.
 Graph.prototype.forEachNode = function(cb) {
-  console.log('before callback executes:', this.storage);
+  //console.log('before callback executes:', this.storage);
   for (var x = 0; x < this.storage.length; x++) {
     cb(this.storage[x].val);
   }
-  console.log('storage after:', this.storage)
+  //console.log('storage after:', this.storage)
 };
 
 /*
